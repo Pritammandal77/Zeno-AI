@@ -1,0 +1,14 @@
+.nav1 a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  background-color: #254bf6;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.nav1 a:hover::after {
+  transform: scaleX(1);
+}
