@@ -8,8 +8,8 @@
   }
   
   .hamburger {
-    /* display: none; */
-    z-index: 10;
+    display: none;
+    z-index: 100;
     animation: hamAni 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     will-change: transform;
   }
