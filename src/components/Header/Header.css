@@ -1,0 +1,15 @@
+@keyframes hamAni {
+    from {
+      transform: translate3d(70vw, 0, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .hamburger {
+    /* display: none; */
+    z-index: 10;
+    animation: hamAni 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    will-change: transform;
+  }
