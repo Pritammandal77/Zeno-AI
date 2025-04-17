@@ -51,7 +51,7 @@ function Header() {
                     <ul className='flex gap-15 text-2xl items-center'>
                         <NavLink to='/'
                             style={({ isActive }) => ({
-                                color: isActive && "#b432ff" ,
+                                color: isActive && "#b432ff",
                                 fontWeight: isActive ? "600" : "400",
                             })}>
                             <li className="cursor-pointer ">Home</li>
@@ -64,8 +64,22 @@ function Header() {
                         >
                             <li className='cursor-pointer '>Chat</li>
                         </NavLink>
-                        <li className='cursor-pointer '>VoiceAssistant</li>
-                        <li className='cursor-pointer '>About</li>
+                        <NavLink to='/assistant'
+                            style={({ isActive }) => ({
+                                color: isActive && "#b432ff",
+                                fontWeight: isActive ? "600" : "400",
+                            })}
+                        >
+                            <li className='cursor-pointer '>Assistant</li>
+                        </NavLink>
+                        <NavLink to='/about'
+                            style={({ isActive }) => ({
+                                color: isActive && "#b432ff",
+                                fontWeight: isActive ? "600" : "400",
+                            })}
+                        >
+                            <li className='cursor-pointer '>About</li>
+                        </NavLink>
                         <li className='cursor-pointer flex items-center justify-center'>
                             <label className="switch">
                                 <input type="checkbox" onChange={changeMode} />
@@ -87,7 +101,7 @@ function Header() {
                         <ul className='flex gap-15 text-2xl flex-col '>
                             <NavLink to="/"
                                 style={({ isActive }) => ({
-                                    color: isActive && "#b432ff" ,
+                                    color: isActive && "#b432ff",
                                     fontWeight: isActive ? "600" : "400",
                                 })}>
                                 <li className='cursor-pointer' onClick={HandleCloseHamburger}>Home</li>
@@ -99,9 +113,23 @@ function Header() {
                                 })}>
                                 <li className='cursor-pointer' onClick={HandleCloseHamburger}>Chat</li>
                             </NavLink>
-                            <li className='cursor-pointer'>VoiceAssistant</li>
-                            <li className='cursor-pointer'>About</li>
-                            <li className='cursor-pointer'>
+                            <NavLink to='/assistant'
+                                style={({ isActive }) => ({
+                                    color: isActive && "#b432ff",
+                                    fontWeight: isActive ? "600" : "400",
+                                })}
+                            >
+                                <li className='cursor-pointer ' onClick={HandleCloseHamburger}>Assistant</li>
+                            </NavLink>
+                            <NavLink to='/about'
+                                style={({ isActive }) => ({
+                                    color: isActive && "#b432ff",
+                                    fontWeight: isActive ? "600" : "400",
+                                })}
+                            >
+                                <li className='cursor-pointer ' onClick={HandleCloseHamburger}>About</li>
+                            </NavLink>
+                            <li className='cursor-pointer' onClick={HandleCloseHamburger}>
                                 <label className="switch">
                                     <input type="checkbox" onChange={changeMode} />
                                     <span className="slider"></span>
