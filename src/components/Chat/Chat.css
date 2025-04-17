@@ -1,0 +1,52 @@
+/* App.css */
+.chat-container {
+    margin: auto;
+    font-family: sans-serif;
+  }
+  
+  .chat-box {
+    padding: 1rem;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .msg {
+    margin-bottom: 1rem;
+  }
+  
+  .msg.user {
+    text-align: right;
+    padding: 20px 0px;
+    font-size: 18px;
+    
+  }
+  
+  .msg.assistant {
+    text-align: left;
+    width: 70vw;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+   
+  }
+  
+  .input-box {
+    display: flex;
+    gap: 1rem;
+  }
+
+
+@media (max-width: 1023px) {
+    
+    .msg.user{
+        font-size: 17px;
+    }
+
+    .msg.assistant {
+        width: 80vw;
+        padding: 15px;
+        overflow-x: scroll;
+        font-size: 17px;
+    }
+}
