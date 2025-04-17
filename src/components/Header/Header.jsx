@@ -1,8 +1,13 @@
 import React from 'react';
 import './Header.css'
 import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setMode } from '../../features/Mode/ModeSlice';
 
 function Header() {
+
+    const mode = useSelector((state) => state.mode.mode)
+    const dispatch = useDispatch()
 
     const HandleOpenHamburger = () => {
         let hamburger = document.querySelector(".hamburger")
@@ -14,31 +19,59 @@ function Header() {
         hamburger.style.display = "none"
     }
 
+    console.log('out', mode)
+
+    const changeMode = () => {
+        // console.log(mode)
+
+        if (mode === 'dark') {
+            dispatch(setMode('light'))
+        } else if (mode === 'light') {
+            dispatch(setMode('dark'))
+        }
+    }
+
+    if (mode == 'dark') {
+        document.body.style.backgroundColor = '#01000b'
+        document.body.style.color = "white"
+    } else {
+        document.body.style.backgroundColor = '#e3e3e3'
+        document.body.style.color = "black"
+
+    }
+
     return (
         <>
-            <nav className='h-15 bg-[#1b1b1b] flex justify-between px-10 items-center'>
+            <nav className={`h-15  flex justify-between px-10 items-center fixed top-0 w-screen z-100
+                    ${mode == 'dark' ? 'bg-[#1b1b1b]' : 'bg-[#b9c651]'}        `}>
                 <div className='text-3xl font-semibold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent'>
                     <NavLink to="/">Zeno</NavLink>
                 </div>
                 <div className='hidden lg:flex'>
-                    <ul className='flex gap-15 text-2xl text-white'>
+                    <ul className='flex gap-15 text-2xl items-center'>
                         <NavLink to='/'
                             style={({ isActive }) => ({
-                                color: isActive ? "#b432ff" : "white",
+                                color: isActive && "#b432ff" ,
                                 fontWeight: isActive ? "600" : "400",
                             })}>
-                            <li className='cursor-pointer'>Home</li>
+                            <li className="cursor-pointer ">Home</li>
                         </NavLink>
                         <NavLink to='/chat'
                             style={({ isActive }) => ({
-                                color: isActive ? "#b432ff" : "white",
+                                color: isActive && "#b432ff",
                                 fontWeight: isActive ? "600" : "400",
                             })}
                         >
-                            <li className='cursor-pointer'>Chat</li>
+                            <li className='cursor-pointer '>Chat</li>
                         </NavLink>
-                        <li className='cursor-pointer'>VoiceAssistant</li>
-                        <li className='cursor-pointer'>About</li>
+                        <li className='cursor-pointer '>VoiceAssistant</li>
+                        <li className='cursor-pointer '>About</li>
+                        <li className='cursor-pointer flex items-center justify-center'>
+                            <label className="switch">
+                                <input type="checkbox" onChange={changeMode} />
+                                <span className="slider"></span>
+                            </label>
+                        </li>
                     </ul>
                 </div>
 
@@ -46,27 +79,35 @@ function Header() {
                     <i className="fa-solid fa-bars text-[25px] mr-0 cursor-pointer" id='menuIcon' style={{ color: 'white' }} onClick={HandleOpenHamburger}></i>
                 </div>
 
-                <div className='hamburger absolute top-0 right-0 bg-black z-100 h-[100vh] w-[50vw] hidden'>
+                <div className={`hamburger absolute top-0 right-0 z-100 h-[100vh] w-[50vw] hidden
+                    ${mode == 'dark' ? 'bg-black' : 'bg-[#48fd91]'} `}>
                     <i className="fa-solid fa-xmark text-white  
                                 text-[25px] cursor-pointer absolute top-4 right-4" onClick={HandleCloseHamburger}></i>
                     <div className='mt-20 p-5'>
-                        <ul className='flex gap-15 text-2xl text-white flex-col '>
+                        <ul className='flex gap-15 text-2xl flex-col '>
                             <NavLink to="/"
                                 style={({ isActive }) => ({
-                                    color: isActive ? "#b432ff" : "white",
+                                    color: isActive && "#b432ff" ,
                                     fontWeight: isActive ? "600" : "400",
                                 })}>
                                 <li className='cursor-pointer' onClick={HandleCloseHamburger}>Home</li>
                             </NavLink>
                             <NavLink to="/chat"
                                 style={({ isActive }) => ({
-                                    color: isActive ? "#b432ff" : "white",
+                                    color: isActive && "#b432ff",
                                     fontWeight: isActive ? "600" : "400",
                                 })}>
                                 <li className='cursor-pointer' onClick={HandleCloseHamburger}>Chat</li>
                             </NavLink>
                             <li className='cursor-pointer'>VoiceAssistant</li>
                             <li className='cursor-pointer'>About</li>
+                            <li className='cursor-pointer'>
+                                <label className="switch">
+                                    <input type="checkbox" onChange={changeMode} />
+                                    <span className="slider"></span>
+                                </label>
+
+                            </li>
                         </ul>
                     </div>
                 </div>
