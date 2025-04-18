@@ -16,6 +16,7 @@ function Chat() {
     if (!input.trim()) return;
 
     const newMessages = [...messages, { role: "user", content: input }];
+    console.log('newMessages', newMessages)
     setMessages(newMessages);
     setInput("");
     setLoading(true);
@@ -35,9 +36,8 @@ function Chat() {
 
       const data = await res.json();
       const reply = data.choices?.[0]?.message?.content;
-      // console.log(reply)
+      console.log("reply", reply)
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
-
     } catch (err) {
       console.error("Error:", err);
 
@@ -48,7 +48,6 @@ function Chat() {
 
   let user = document.querySelector(".user")
   let assistant = document.querySelectorAll(".assistant")
-
 
 
   useEffect(() => {
