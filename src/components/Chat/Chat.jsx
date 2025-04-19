@@ -84,9 +84,9 @@ function Chat() {
         </div>
 
         <div className={`w-screen flex justify-center items-center fixed bottom-0  py-3 lg:p-5
-          ${mode == 'dark' ? 'bg-[#01000b]' : 'bg-[#b9c651]'} `}>
+          ${mode == 'dark' ? 'bg-[#01000b]' : 'bg-gray-700'} `}>
           <input type="text" className={`w-[70vw] h-12 rounded-l-xl px-3 lg:px-5 text-[19px] lg:text-[20px] focus:outline-none
-          ${mode == 'dark' ? 'bg-[#1e1e1e]' : 'bg-[#f2ff90]'} `}
+          ${mode == 'dark' ? 'bg-[#1e1e1e]' : 'bg-gray-500'} `}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask something..."
