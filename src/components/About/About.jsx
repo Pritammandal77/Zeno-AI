@@ -18,7 +18,7 @@ function About() {
 
         <div className=" flex flex-col lg:flex-row justify-center items-center ">
           <div className={`h-[300px] w-[300px] border-1 border-pink-500  flex flex-col items-center rounded-2xl hover:shadow-[0_0_15px_2px_#ec4899] mt-6  
-           ${mode == 'dark' ? '#bg-[#1a1a1a]' : 'bg-[#cdcdcd] border-2'}`}>
+           ${mode == 'dark' ? 'bg-[#1a1a1a]' : 'bg-[#b6b4b4] border-2'}`}>
             <div className="h-[20px] ml-2 mt-2.5 font-extrabold text-2xl mb-2.5 ">
               ℹ️ About
             </div>
@@ -32,7 +32,7 @@ function About() {
           </div>
 
           <div className={`h-[300px] w-[300px] border-1 border-purple-500 mt-6 lg:ml-9 flex flex-col items-center rounded-2xl hover:shadow-[0_0_20px_2px_#8b5cf6] 
-           ${mode == 'dark' ? '#bg-[#1a1a1a]' : 'bg-[#cdcdcd] border-2'}`}>
+           ${mode == 'dark' ? 'bg-[#1a1a1a]' : 'bg-[#b6b4b4] border-2'}`}>
             <div className="h-[20px]  mt-2.5 font-extrabold text-2xl ">
               ⚡Key Features
             </div>
@@ -55,7 +55,7 @@ function About() {
           </div>
 
           <div className={`h-[300px] w-[300px] border-1 border-[#00ff48] mt-6 lg:ml-9 flex flex-col items-center rounded-2xl hover:shadow-[0_0_20px_2px_#00ff48] p-1
-           ${mode == 'dark' ? '#bg-[#1a1a1a]' : 'bg-[#cdcdcd] border-2'}`}>
+           ${mode == 'dark' ? 'bg-[#1a1a1a]' : 'bg-[#b6b4b4] border-2'}`}>
             <div className="h-[20px]  mt-2.5 font-extrabold text-2xl ">
               ⚙️ Tech Stack
             </div>
@@ -86,7 +86,7 @@ function About() {
           </div>
 
           <div className={`h-[300px] w-[300px] border-1 border-pink-500 m-2.5 lg:ml-9 mt-6 flex flex-col items-center rounded-2xl hover:shadow-[0_0_20px_2px_#ec4899] 
-          ${mode == 'dark' ? '#bg-[#1a1a1a]' : 'bg-[#cdcdcd] border-2'}`}>
+          ${mode == 'dark' ? 'bg-[#1a1a1a]' : 'bg-[#b6b4b4] border-2'}`}>
             <div className="h-[20px] ml-2 mt-3 font-extrabold text-2xl">
               👨‍💻Meet the Team
             </div>
@@ -124,7 +124,7 @@ function About() {
       <div className="">
         <div className="flex justify-center w-[100%] p-2 font-serif text-2xl lg:mt-35 ">
           <a href="https://github.com/Pritammandal77/Zeno-AI">
-            <i className="fa-brands fa-github text-5xl"></i>
+            <i className={`fa-brands fa-github text-5xl mt-1 rounded-3xl ${mode == 'dark' ? 'hover:shadow-[0_0_10px_2px_#ffffff]' : 'hover:shadow-[0_0_10px_2px_#000000]'}`}></i>
           </a>
         </div>
 
