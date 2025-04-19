@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <>
-      <div className='flex flex-col items-center justify-center h-[90vh] mt-15'>
+      <div className='flex flex-col items-center justify-center h-[85vh] mt-15 '>
 
         <div className='w-full flex justify-center items-center'>
           <div className='pl-10 lg:w-[60vw]'>

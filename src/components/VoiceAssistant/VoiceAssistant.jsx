@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Aurora from "../Aurora/Aurora";
 import Loader from "../Loader/Loader";
 import { useSelector } from "react-redux";
+import { ToastContainer, toast } from 'react-toastify';
 
 const VoiceAssistant = () => {
 
@@ -11,6 +12,7 @@ const VoiceAssistant = () => {
     const [isListening, setIsListening] = useState(false);
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [isAsistantSpeaking, setIsAssistantSpeaking] = useState(false);
 
     //in this we are storing the users input voice , to display in the UI
     const [liveTranscript, setLiveTranscript] = useState("");
@@ -47,6 +49,11 @@ const VoiceAssistant = () => {
             utterance.voice = selectedVoice;
         }
 
+        // when assisatnt stops speaking it works
+        utterance.onend = () => {
+            setIsAssistantSpeaking(false);  //when assisstant stops speaking , then unmount the stop listening button
+        };
+
         //Speaks the lines
         synth.speak(utterance);
     };
@@ -77,7 +84,8 @@ const VoiceAssistant = () => {
             const reply = data.choices?.[0]?.message?.content;
 
             //calling speakText function , to read aloud the response from API
-            speakText(reply); 
+            speakText(reply);
+            setIsAssistantSpeaking(true);
 
             setMessages(prev => [...prev, { role: "assistant", content: reply }]);
 
@@ -87,6 +95,7 @@ const VoiceAssistant = () => {
         } finally {
             setLoading(false);
             setText("");
+            // setIsAssistantSpeaking(false)
         }
     };
 
@@ -176,6 +185,7 @@ const VoiceAssistant = () => {
     };
 
     const handleStartListening = () => {
+        setIsAssistantSpeaking(false)
         setLiveTranscript("")
         if (!recognitionRef.current) {
             initializeRecognition();
@@ -183,14 +193,23 @@ const VoiceAssistant = () => {
         recognitionRef.current.start();
     };
 
+    //used to stop spkeaing 
+    const stopSpeaking = () => {
+        if (window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        toast("Stopped Listening")
+        setIsAssistantSpeaking(false)
+    };
 
     return (
         <>
+
             <div className='fixed top-20 right-0 z-100'>
                 {loading && <Loader />}
             </div>
 
-            <div className="mt-15 h-screen flex justify-center overflow-x-hidden">
+            <div className="mt-15 h-auto flex justify-center overflow-x-hidden bg-amber-200">
 
                 <div className={`absolute top-[20%] md:top-[30%]  rounded-3xl flex flex-col p-5 gap-5 lg:gap-8 items-center justify-center 
                     ${mode == 'dark' ? 'lg:bg-[#0f0f0f]' : 'bg-[#a1a1a1]'} `}>
@@ -213,6 +232,7 @@ const VoiceAssistant = () => {
                             <p>Navigate to any websites</p>
                         </div>
 
+
                     </div>
                 </div>
 
@@ -225,6 +245,16 @@ const VoiceAssistant = () => {
                 }
                 </div>
 
+                {
+                    isAsistantSpeaking && <div className="absolute bottom-5 lg:bottom-10 right-5">
+                        <button className={` font-bold bg-[#363636]  rounded-xl text-l lg:text-xl cursor-pointer hover:bg-[#e481ff] z-10 p-3 
+                         ${mode == 'dark' ? 'text-black' : 'text-white'} `}
+                            onClick={stopSpeaking}>
+                            Stop Listening
+                        </button>
+                    </div>
+                }
+
 
                 <div className="absolute bottom-20 flex flex-col items-center justify-center gap-3 lg:gap-5">
 
@@ -233,7 +263,7 @@ const VoiceAssistant = () => {
                             isListening ? <p>Listening...</p> : liveTranscript}
                     </div>
 
-                    <div className="flex items-center justify-center rounded-full  h-20 w-20  bg-gradient-to-r from-blue-600 via-pink-500 to-yellow-500  hover:shadow-[0_0_20px_2px_#ec4899]"
+                    <div className="flex items-center justify-center rounded-full  h-20 w-20 bg-gradient-to-r from-blue-600 via-pink-500 to-yellow-500  hover:shadow-[0_0_20px_2px_#ec4899]"
                         onClick={handleStartListening}
                         disabled={isListening}
                     >
@@ -243,6 +273,11 @@ const VoiceAssistant = () => {
                 </div>
 
             </div>
+
+            <ToastContainer
+                theme="dark" // or "light" or "colored"
+                position="top-center"
+                autoClose={3000} />
 
         </>
 
