@@ -37,18 +37,20 @@ function Home() {
           </NavLink>
 
           <div className='h-[40vh] flex flex-col justify-between gap-5'>
-            
+
             <NavLink to='/assistant'>
               <div className='bg-[#BAF288] w-[40vw] lg:w-[30vw] h-[19vh] rounded-2xl p-3 lg:p-10 hover:shadow-[0_0_20px_2px_#BAF288] flex items-center gap-3'>
                 <FaMicrophone className='text-2xl' />
                 <h1 className='text-3xl font-semibold'>Talk With Zeno</h1>
               </div>
             </NavLink>
+            <NavLink to='/about'>
+              <div className='bg-[#76ffd8] w-[40vw] lg:w-[30vw] h-[19vh] rounded-2xl p-2 lg:p-10 hover:shadow-[0_0_20px_2px_#76ffd8]  flex items-center gap-3'>
+                <i className="fa-solid fa-info-circle text-2xl "></i>
+                <h1 className='text-3xl font-semibold'>Know About Zeno</h1>
+              </div>
+            </NavLink>
 
-            <div className='bg-[#76ffd8] w-[40vw] lg:w-[30vw] h-[19vh] rounded-2xl p-2 lg:p-10 hover:shadow-[0_0_20px_2px_#76ffd8]  flex items-center gap-3'>
-              <i className="fa-solid fa-info-circle text-2xl "></i>
-              <h1 className='text-3xl font-semibold'>Know About Zeno</h1>
-            </div>
           </div>
 
         </div>

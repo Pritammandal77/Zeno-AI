@@ -91,29 +91,29 @@ function About() {
               👨‍💻Meet the Team
             </div>
 
-            <div className=" mt-[60px]  flex flex-col justify-center items-center text-xl">
-              <div className="m-2.5">
+            <div className=" mt-[60px]  flex flex-col justify-center  text-xl">
+              <div className="m-2.5 hover:text-blue-400">
                 <a
                   className="font-bold"
                   href="https://www.linkedin.com/in/pritam-mandal-871510281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                >
-                  Pritam Mandal
+                  target='_blank' >
+                  <i className="fa-brands fa-linkedin"></i> Pritam Mandal
                 </a>
               </div>
-              <div className="m-2.5">
+              <div className="m-2.5 hover:text-blue-400">
                 <a
                   className="font-bold"
                   href="https://www.linkedin.com/in/shriharsh-nandigamwar-b106702b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                >
-                  Shriharsh Nandigamwar
+                  target='_blank' >
+                  <i className="fa-brands fa-linkedin"></i> Shriharsh Nandigamwar
                 </a>
               </div>
-              <div className="m-2.5">
+              <div className="m-2.5 hover:text-blue-400">
                 <a
                   className="font-bold"
                   href="http://www.linkedin.com/in/harshal-patil-56a0b2293"
-                >
-                  Harshal Patil
+                  target='_blank'  >
+                  <i className="fa-brands fa-linkedin"></i> Harshal Patil
                 </a>
               </div>
             </div>
@@ -121,14 +121,14 @@ function About() {
         </div>
       </div>
 
-      <div className="">
+      <div className="py-10">
         <div className="flex justify-center w-[100%] p-2 font-serif text-2xl lg:mt-35 ">
           <a href="https://github.com/Pritammandal77/Zeno-AI">
             <i className="fa-brands fa-github text-5xl"></i>
           </a>
         </div>
 
-        <div className="mt-6 flex flex-clo justify-center w-[100%] p-2 font-mono text-xl lg:mt-10">
+        <div className="mt-6 flex  justify-center w-[100%] p-2 font-mono text-xl lg:mt-10">
           <p>&copy; 2025 Zeno-AI. All rights reserved.</p>
         </div>
       </div>

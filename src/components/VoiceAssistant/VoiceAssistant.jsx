@@ -205,11 +205,20 @@ const VoiceAssistant = () => {
     return (
         <>
 
+            {/* rendering the aurora , when user gives voice command */}
+            <div className="hidden md:flex absolute top-0 ">{
+                isListening && <Aurora colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+                    blend={0.5}
+                    amplitude={1.0}
+                    speed={0.5} />
+            }
+            </div>
+
             <div className='fixed top-20 right-0 z-100'>
                 {loading && <Loader />}
             </div>
 
-            <div className="mt-15 h-auto flex justify-center overflow-x-hidden bg-amber-200">
+            <div className="mt-15 h-screen flex justify-center overflow-x-hidden">
 
                 <div className={`absolute top-[20%] md:top-[30%]  rounded-3xl flex flex-col p-5 gap-5 lg:gap-8 items-center justify-center 
                     ${mode == 'dark' ? 'lg:bg-[#0f0f0f]' : 'bg-[#a1a1a1]'} `}>
@@ -236,14 +245,6 @@ const VoiceAssistant = () => {
                     </div>
                 </div>
 
-                {/* rendering the aurora , when user gives voice command */}
-                <div className="hidden md:flex">{
-                    isListening && <Aurora colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-                        blend={0.5}
-                        amplitude={1.0}
-                        speed={0.5} />
-                }
-                </div>
 
                 {
                     isAsistantSpeaking && <div className="absolute bottom-5 lg:bottom-10 right-5">
@@ -277,7 +278,8 @@ const VoiceAssistant = () => {
             <ToastContainer
                 theme="dark" // or "light" or "colored"
                 position="top-center"
-                autoClose={3000} />
+                autoClose={3000}
+            />
 
         </>
 
