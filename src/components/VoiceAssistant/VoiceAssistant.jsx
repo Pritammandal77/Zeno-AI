@@ -95,7 +95,6 @@ const VoiceAssistant = () => {
         } finally {
             setLoading(false);
             setText("");
-            // setIsAssistantSpeaking(false)
         }
     };
 
@@ -109,12 +108,10 @@ const VoiceAssistant = () => {
 
         recognition.onstart = () => {
             setIsListening(true);
-            // console.log("🎤 Listening...");
         };
 
         recognition.onresult = (event) => {
             const transcript = event.results[0][0].transcript; // In this variable , we are holding the voice to text message
-            // console.log("Transcript:", transcript);
 
             setText(transcript);
             recognitionRef.current.transcript = transcript; //This stores the transcript in a ref, so it can be used after recognition ends (inside onend).
@@ -143,7 +140,6 @@ const VoiceAssistant = () => {
         recognition.onend = () => {
             setIsListening(false);
             const finalTranscript = recognitionRef.current.transcript || "";
-            // console.log("🎤 Stopped. Sending:", finalTranscript);
 
             const lowerTranscript = finalTranscript.toLowerCase();
 
@@ -228,14 +224,14 @@ const VoiceAssistant = () => {
                     <div className={`flex gap-2 `}>
                         <div className={`gap-5 border-gray-600 cursor-pointer  border-2 rounded-3xl p-3 lg:p-5 text-2xl  flex items-center justify-center
                            ${mode == 'dark' ? 'text-gray-400 hover:bg-[#1f1f1f]' : 'text-black hover:bg-[#a1a1a1]'} `} >
-                            <div className="hidden lg:flex">
+                            <div className="hidden md:flex">
                                 <i className="fa-solid fa-phone-volume "></i>
                             </div>
                             <p>Ask Anything You Want !!</p>
                         </div>
                         <div className={`gap-5 border-gray-600 cursor-pointer  border-2 rounded-3xl p-3 lg:p-5 text-2xl  flex items-center justify-center
                                ${mode == 'dark' ? 'text-gray-400 hover:bg-[#1f1f1f]' : 'text-black hover:bg-[#a1a1a1]'}  `}>
-                            <div className="hidden lg:flex">
+                            <div className="hidden md:flex">
                                 <i className="fa-solid fa-map-pin "></i>
                             </div>
                             <p>Navigate to any websites</p>
@@ -276,7 +272,7 @@ const VoiceAssistant = () => {
             </div>
 
             <ToastContainer
-                theme="dark" // or "light" or "colored"
+                theme="dark" 
                 position="top-center"
                 autoClose={3000}
             />
