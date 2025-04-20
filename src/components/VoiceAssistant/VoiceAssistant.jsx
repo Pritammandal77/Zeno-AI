@@ -237,7 +237,7 @@ const VoiceAssistant = () => {
                 </div>
 
                 {/* rendering the aurora , when user gives voice command */}
-                <div className="hidden md:flex">{
+                <div className="hidden md:flex bg-red-400 absolute top-0">{
                     isListening && <Aurora colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
                         blend={0.5}
                         amplitude={1.0}
