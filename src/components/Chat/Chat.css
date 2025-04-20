@@ -15,10 +15,11 @@
   }
   
   .msg.user {
-    text-align: right;
-    padding: 20px 0px;
+    text-align: justify;
+    margin: 25px 0px;
     font-size: 18px;
-    
+    max-width: 70vw;
+    align-self: end;
   }
   
   .msg.assistant {

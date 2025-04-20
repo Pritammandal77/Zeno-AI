@@ -16,8 +16,9 @@ function About() {
           </div>
         </div>
 
-        <div className=" flex flex-col lg:flex-row justify-center items-center ">
-          <div className={`h-[300px] w-[300px] border-1 border-pink-500  flex flex-col items-center rounded-2xl hover:shadow-[0_0_15px_2px_#ec4899] mt-6  
+        <div className=" grid grid-cols-1 md:grid-cols-2 place-items-center lg:flex items-center justify-center lg:px-5 ">
+
+          <div className={`h-[300px] w-[300px] lg:h-[400px] xl:h-[300px] border-1 border-pink-500  flex flex-col items-center rounded-2xl hover:shadow-[0_0_15px_2px_#ec4899] mt-6  
            ${mode == 'dark' ? '#bg-[#1a1a1a]' : 'bg-[#cdcdcd] border-2'}`}>
             <div className="h-[20px] ml-2 mt-2.5 font-extrabold text-2xl mb-2.5 ">
               ℹ️ About
@@ -31,7 +32,7 @@ function About() {
             </div>
           </div>
 
-          <div className={`h-[300px] w-[300px] border-1 border-purple-500 mt-6 lg:ml-9 flex flex-col items-center rounded-2xl hover:shadow-[0_0_20px_2px_#8b5cf6] 
+          <div className={`h-[300px] w-[300px] lg:h-[400px] xl:h-[300px] border-1 border-purple-500 mt-6 lg:ml-9 flex flex-col items-center rounded-2xl hover:shadow-[0_0_20px_2px_#8b5cf6] 
            ${mode == 'dark' ? '#bg-[#1a1a1a]' : 'bg-[#cdcdcd] border-2'}`}>
             <div className="h-[20px]  mt-2.5 font-extrabold text-2xl ">
               ⚡Key Features
@@ -54,7 +55,7 @@ function About() {
 
           </div>
 
-          <div className={`h-[300px] w-[300px] border-1 border-[#00ff48] mt-6 lg:ml-9 flex flex-col items-center rounded-2xl hover:shadow-[0_0_20px_2px_#00ff48] p-1
+          <div className={`h-[300px] w-[300px] lg:h-[400px] xl:h-[300px] border-1 border-[#00ff48] mt-6 lg:ml-9 flex flex-col items-center rounded-2xl hover:shadow-[0_0_20px_2px_#00ff48] p-1
            ${mode == 'dark' ? '#bg-[#1a1a1a]' : 'bg-[#cdcdcd] border-2'}`}>
             <div className="h-[20px]  mt-2.5 font-extrabold text-2xl ">
               ⚙️ Tech Stack
@@ -85,50 +86,52 @@ function About() {
 
           </div>
 
-          <div className={`h-[300px] w-[300px] border-1 border-pink-500 m-2.5 lg:ml-9 mt-6 flex flex-col items-center rounded-2xl hover:shadow-[0_0_20px_2px_#ec4899] 
+          <div className={`h-[300px] w-[300px] lg:h-[400px] xl:h-[300px] border-1 border-pink-500 m-2.5 lg:ml-9 mt-6 flex flex-col items-center rounded-2xl hover:shadow-[0_0_20px_2px_#ec4899] 
           ${mode == 'dark' ? '#bg-[#1a1a1a]' : 'bg-[#cdcdcd] border-2'}`}>
             <div className="h-[20px] ml-2 mt-3 font-extrabold text-2xl">
               👨‍💻Meet the Team
             </div>
 
-            <div className=" mt-[60px]  flex flex-col justify-center items-center text-xl">
-              <div className="m-2.5">
+            <div className=" mt-[60px]  flex flex-col justify-center  text-xl">
+              <div className="m-2.5 hover:text-blue-400">
                 <a
                   className="font-bold"
                   href="https://www.linkedin.com/in/pritam-mandal-871510281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                >
-                  Pritam Mandal
+                  target='_blank' >
+                  <i className="fa-brands fa-linkedin"></i> Pritam Mandal
                 </a>
               </div>
-              <div className="m-2.5">
+              <div className="m-2.5 hover:text-blue-400">
                 <a
                   className="font-bold"
                   href="https://www.linkedin.com/in/shriharsh-nandigamwar-b106702b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                >
-                  Shriharsh Nandigamwar
+                  target='_blank' >
+                  <i className="fa-brands fa-linkedin"></i> Shriharsh Nandigamwar
                 </a>
               </div>
-              <div className="m-2.5">
+              <div className="m-2.5 hover:text-blue-400">
                 <a
                   className="font-bold"
                   href="http://www.linkedin.com/in/harshal-patil-56a0b2293"
-                >
-                  Harshal Patil
+                  target='_blank'  >
+                  <i className="fa-brands fa-linkedin"></i> Harshal Patil
                 </a>
               </div>
             </div>
           </div>
+
         </div>
+
       </div>
 
-      <div className="">
+      <div className="py-10">
         <div className="flex justify-center w-[100%] p-2 font-serif text-2xl lg:mt-35 ">
           <a href="https://github.com/Pritammandal77/Zeno-AI">
             <i className="fa-brands fa-github text-5xl"></i>
           </a>
         </div>
 
-        <div className="mt-6 flex flex-clo justify-center w-[100%] p-2 font-mono text-xl lg:mt-10">
+        <div className="mt-6 flex  justify-center w-[100%] p-2 font-mono text-xl lg:mt-10 text-center">
           <p>&copy; 2025 Zeno-AI. All rights reserved.</p>
         </div>
       </div>
