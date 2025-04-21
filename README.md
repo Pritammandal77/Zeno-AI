@@ -41,7 +41,7 @@ npm install
 ```
 
 ### 3. Setup Environment Variables
-Create a .env file in the root directory and add your Grok API key:
+Create a .env file in the root directory and add your Groq API key:
 ```
 VITE_GROQ_API_KEY = YOUR_API_KEY
 ```
