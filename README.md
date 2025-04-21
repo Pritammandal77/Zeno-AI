@@ -39,3 +39,15 @@
 ```bash
 git clone https://github.com/Pritammandal77/Zeno-AI.git
 cd Zeno-AI
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Setup Environment Variables
+Create a .env file in the root directory and add your Grok API key:
+```
+
+
