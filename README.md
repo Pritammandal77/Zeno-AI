@@ -1,4 +1,4 @@
-##🤖 Zeno-AI – AI Chatbot & Voice Assistant 
+##🤖 Zeno-AI – AI Chatbot & Voice Assistant ##
 
 Zeno-AI is a sleek and smart AI-powered chatbot and voice assistant built using the Grok API. Designed with a modern UI and smooth user experience, Zeno-AI allows users to chat via text or voice, offering a seamless and engaging interface.
 
