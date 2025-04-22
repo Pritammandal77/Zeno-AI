@@ -8,18 +8,14 @@
 ---
 
 ## 📌 Problem Statement
-
-Select the problem statement number and title from the official list given in Participant Manual.
-
-**Example:**  
-**Problem Statement 7 – Transform the Future of Rural Commerce**
+ 
+**Problem Statement 1 - Weave AI magic with Groq**
 
 ---
 
 ## 🎯 Objective
 
-What problem does your project solve, and who does it serve?  
-Briefly describe the real-world use case and the value it provides.
+Build a creative and interactive multimodal application powered by Groq, leveraging its capabilities to solve real-world problems with a focus on user experience and innovation.
 
 ---
 
@@ -31,9 +27,9 @@ Briefly describe the real-world use case and the value it provides.
 
 ### Team Members:
 
-- 1 Pritam Mandal
-- 2 Shriharsh Nandigamwar
-- 3 Harshal Patil
+- 1 [Pritam Mandal](https://www.linkedin.com/in/pritam-mandal-871510281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+- 2 [Shriharsh Nandigamwar](https://www.linkedin.com/in/shriharsh-nandigamwar-b106702b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+- 3 [Harshal Patil](http://www.linkedin.com/in/harshal-patil-56a0b2293)
 
 ### Your Approach:
 
@@ -51,14 +47,10 @@ Briefly describe the real-world use case and the value it provides.
 - APIs: Groq API & Web Speech API.
 - Hosting: Netlify.app
 
-### Sponsor Technologies Used (if any):
+### Sponsor Technologies Used :
 
-- [✅] **Groq:** _How you used Groq_
-- [ ] **Monad:** _Your blockchain implementation_
-- [ ] **Fluvio:** _Real-time data handling_
-- [ ] **Base:** _AgentKit / OnchainKit / Smart Wallet usage_
-- [ ] **Screenpipe:** _Screen-based analytics or workflows_
-- [ ] **Stellar:** _Payments, identity, or token usage_
+- ✅ **Groq:** _Our chatbot is built with cutting-edge features to provide a smart and seamless experience. Powered by the Grok AI API, it understands and responds to user queries with impressive accuracy. To take user interaction a step further, we’ve integrated a voice assistant, allowing hands-free communication and real-time responses._
+
 
 ---
 
