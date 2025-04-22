@@ -25,7 +25,7 @@ function About() {
             </div>
             <div className="text-[15px] m-3  text-justify">
               Our chatbot is built with cutting-edge features to provide a smart
-              and seamless experience. Powered by the Grok AI API, it understands
+              and seamless experience. Powered by the Groq AI API, it understands
               and responds to user queries with impressive accuracy. To take user
               interaction a step further, we’ve integrated a voice assistant,
               allowing hands-free communication and real-time responses.
@@ -41,7 +41,7 @@ function About() {
             <div className=" mt-[20px]  p-2 flex flex-col justify-center items-center ">
 
               <div className="flex flex-col ">
-                <p className="text-justify"> 1. Grok API Integration : Get smart and context-aware answers powered by Groq AI.</p>
+                <p className="text-justify"> 1. Groq API Integration : Get smart and context-aware answers powered by Groq AI.</p>
               </div>
 
               <div className="flex flex-col ">
@@ -76,7 +76,7 @@ function About() {
               </div>
 
               <div className="flex flex-col ">
-                <p className="text-justify"> 3. Grok API : For generating intelligent, real-time AI responses.</p>
+                <p className="text-justify"> 3. Groq API : For generating intelligent, real-time AI responses.</p>
               </div>
 
               <div className="flex flex-col ">

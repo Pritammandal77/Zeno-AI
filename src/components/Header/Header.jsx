@@ -19,7 +19,6 @@ function Header() {
         hamburger.style.display = "none"
     }
 
-
     const changeMode = () => {
         if (mode === 'dark') {
             dispatch(setMode('light'))

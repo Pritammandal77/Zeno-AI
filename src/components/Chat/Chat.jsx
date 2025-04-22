@@ -13,8 +13,6 @@ function Chat() {
 
   const dispatch = useDispatch()
 
-  console.log(messages.length)
-
   const sendMessage = async () => {
 
     if (!input.trim()) return;
@@ -28,23 +26,6 @@ function Chat() {
     setInput("");
 
   };
-
-
-  let user = document.querySelector(".user")
-  let assistant = document.querySelectorAll(".assistant")
-
-  useEffect(() => {
-    if (assistant) {
-      assistant.forEach(elem => {
-        elem.style.backgroundColor = mode === 'dark' ? '#151515' : '#6B7280'
-        elem.style.color = mode === 'dark' ? '#ffffff' : '#000000'
-      })
-    }
-    if (user) {
-      user.style.color = mode === 'dark' ? '#ffffff' : '#000000'
-    }
-  }, [mode, messages, input, loading])
-
 
   return (
     <>
@@ -85,7 +66,7 @@ function Chat() {
         <div className="chat-container w-[90vw] lg:w-[80vw] pb-50 relative top-10">
           <div className="chat-box flex flex-col">
             {messages.map((msg, i) => (
-              <div key={i} className={`msg ${msg.role}`}>
+              <div key={i} className={`msg ${msg.role} ${mode == 'dark' ? 'bg-[#151515] text-[#ffffff]' : 'bg-[#6B7280] text-[#000000]'}`}>
                 <strong className=''>{msg.role === "user" ? "You" : "Zeno"} :  </strong>
                 <ReactMarkdown>{msg.content}</ReactMarkdown>
               </div>
