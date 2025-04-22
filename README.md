@@ -1,57 +1,143 @@
-# 🤖 Zeno-AI – AI Chatbot & Voice Assistant
+![github-submission-banner](https://github.com/user-attachments/assets/a1493b84-e4e2-456e-a791-ce35ee2bcf2f)
 
-**Zeno-AI** is a sleek and smart AI-powered chatbot and voice assistant built using the **Groq API**. Designed with a modern UI and smooth user experience, Zeno-AI allows users to chat via text or voice, offering a seamless and engaging interface.
+# 🚀 Project Title
+
+> 🚀 Zeno-AI  
+> Your intelligent AI chatbot and voice assistant for instant answers, natural conversations, and hands-free productivity.
 
 ---
 
-## 🚀 Features
+## 📌 Problem Statement
 
-- 💬 **AI Chatbot** – Interact with an intelligent chatbot powered by the Groq API.  
-- 🗣️ **Voice Assistant** – Listen to responses using the Web Speech API for a hands-free experience.  
-- 🎨 **Beautiful UI/UX** – Clean, responsive design built with Tailwind CSS.  
-- 🌗 **Dark/Light Mode** – Switch between light and dark themes for improved accessibility and comfort.  
-- 🧭 **Smooth Navigation** – Fast and fluid navigation using React Router DOM.  
-- ⚙️ **Redux State Management** – Efficient global state handling with Redux Toolkit.  
+Select the problem statement number and title from the official list given in Participant Manual.
+
+**Example:**  
+**Problem Statement 7 – Transform the Future of Rural Commerce**
+
+---
+
+## 🎯 Objective
+
+What problem does your project solve, and who does it serve?  
+Briefly describe the real-world use case and the value it provides.
+
+---
+
+## 🧠 Team & Approach
+
+### Team Name:
+
+`The Hackoholics`
+
+### Team Members:
+
+- 1 Pritam Mandal
+- 2 Shriharsh Nandigamwar
+- 3 Harshal Patil
+
+### Your Approach:
+
+- Why you chose this problem
+- Key challenges you addressed
+- Any pivots, brainstorms, or breakthroughs during hacking
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js  
-- **Styling**: Tailwind CSS  
-- **State Management**: Redux Toolkit  
-- **Routing**: React Router DOM  
-- **Voice Integration**: Web Speech API  
-- **AI Backend**: Groq API  
+### Core Technologies Used:
+
+- Frontend: React.js, Tailwind CSS & Redux Toolkit.
+- APIs: Groq API & Web Speech API.
+- Hosting: Netlify.app
+
+### Sponsor Technologies Used (if any):
+
+- [✅] **Groq:** _How you used Groq_
+- [ ] **Monad:** _Your blockchain implementation_
+- [ ] **Fluvio:** _Real-time data handling_
+- [ ] **Base:** _AgentKit / OnchainKit / Smart Wallet usage_
+- [ ] **Screenpipe:** _Screen-based analytics or workflows_
+- [ ] **Stellar:** _Payments, identity, or token usage_
 
 ---
 
-## 🔧 Getting Started
+## ✨ Key Features
 
-### 1. Clone the Repository
+- ✅ 1 Grok API Integration : Get smart and context-aware answers powered by Groq AI.
+- ✅ 2 Voice Assistant : Talk naturally in english and get instant voice responses from the chatbot.
+- ✅ 3 UI & UX : Clean, intuitive design & Integrated Dark/Light mode toggle for better User Experience.
+
+## ![Screenshot](./public/zenoImg/Home%20zeno.png)
+
+## ![Screenshot](./public/zenoImg/Chat%20zeno.png)
+
+## ![Screenshot](./public/zenoImg/Voice%20zeno.png)
+
+## ![Screenshot](./public/zenoImg/About%20zeno.png)
+
+---
+
+## 📽️ Demo & Deliverables
+
+- **Demo Video Link:** [Paste YouTube or Loom link here]
+- **Pitch Deck / PPT Link:** [Paste Google Slides / PDF link here]
+
+---
+
+## ✅ Tasks & Bonus Checklist
+
+- [ ] **All members of the team completed the mandatory task - Followed at least 2 of our social channels and filled the form** (Details in Participant Manual)
+- [ ] **All members of the team completed Bonus Task 1 - Sharing of Badges and filled the form (2 points)** (Details in Participant Manual)
+- [ ] **All members of the team completed Bonus Task 2 - Signing up for Sprint.dev and filled the form (3 points)** (Details in Participant Manual)
+
+_(Mark with ✅ if completed)_
+
+---
+
+## 🧪 How to Run the Project
+
+### Requirements:
+
+- Node.js
+- API Keys :required Groq API key.
+
+### Local Setup:
 
 ```bash
-git clone https://github.com/Pritammandal77/Zeno-AI.git
+# Clone the repo
+git clone https://github.com/Pritammandal77/Zeno-AI
+
+# Install dependencies
 cd Zeno-AI
-```
-
-### 2. Install Dependencies
-```bash
 npm install
-```
 
-### 3. Setup Environment Variables
-Create a .env file in the root directory and add your Groq API key:
-```
-VITE_GROQ_API_KEY = YOUR_API_KEY
-```
-
-### 4. Start the Development Server
-```
+# Start development server
 npm run dev
 ```
 
+---
 
+## 🧬 Future Scope
 
+List improvements, extensions, or follow-up features:
 
+- 📈 More integrations
+- 🛡️ Security enhancements
+- 🌐 Localization / broader accessibility
 
+---
+
+## 📎 Resources / Credits
+
+- APIs or datasets used
+- Open source libraries or tools referenced
+- Acknowledgements
+
+---
+
+## 🏁 Final Words
+
+Share your hackathon journey — challenges, learnings, fun moments, or shout-outs!
+
+---
