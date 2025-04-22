@@ -31,13 +31,13 @@ Build a creative and interactive multimodal application powered by Groq, leverag
 - 2 [Shriharsh Nandigamwar](https://www.linkedin.com/in/shriharsh-nandigamwar-b106702b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - 3 [Harshal Patil](http://www.linkedin.com/in/harshal-patil-56a0b2293)
 
-## Your Approach:
+## Our Approach:
 
-### Why you chose this problem:
+### Why we chose this problem:
 
 - We believe that interacting with AI should be seamless, natural, and accessible anywhere—whether you're typing, speaking, or multitasking. Many current AI assistants are either limited in functionality, locked behind apps, or struggle with real-time conversational flow. We wanted to build Zeno-AI to bridge that gap: a smart assistant that understands you instantly, responds naturally, and works hands-free—perfect for productivity, accessibility, or just casual conversation.
 
-### Key challenges you addressed:
+### Key challenges we addressed:
 
 - Real-time Voice Interaction: Enabling smooth and fast voice input/output without lag.
 
