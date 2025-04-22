@@ -8,7 +8,7 @@ export const fetchAPIData = createAsyncThunk(
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer ${import.meta.env.VITE_GROQAPI_KEY}`,
+                    Authorization: `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
                 },
                 body: JSON.stringify({
                     model: "llama3-70b-8192",
@@ -24,7 +24,6 @@ export const fetchAPIData = createAsyncThunk(
         }
     }
 );
-
 
 export const APISlice = createSlice({
     name: 'data',

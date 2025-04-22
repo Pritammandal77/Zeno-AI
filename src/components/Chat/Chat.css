@@ -20,6 +20,8 @@
     font-size: 18px;
     max-width: 70vw;
     align-self: end;
+    padding: 15px;
+    border-radius: 15px;
   }
   
   .msg.assistant {
