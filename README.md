@@ -147,7 +147,7 @@ Enable Zeno-AI to remember user preferences, recurring tasks, and context across
 
 ### APIs & Services Used
 
-- HACKHAZARDS API – for powering Zeno-AI’s conversational intelligence.
+- Groq API – for powering Zeno-AI’s conversational intelligence.
 
 - Web Speech API – for real-time voice input and text-to-speech output.
 
@@ -159,9 +159,7 @@ Enable Zeno-AI to remember user preferences, recurring tasks, and context across
 
 ### Acknowledgements
 
-- Huge thanks to the [HACKHAZARDS] organizers and mentors for the guidance and support.
-
-- Inspired by projects like [Zeno-AI].
+- Huge thanks to the HACKHAZARDS organizers and mentors for the guidance and support.
 
 - Shout-out to the amazing dev community whose tools and docs made this possible.
 
