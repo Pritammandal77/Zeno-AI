@@ -92,7 +92,7 @@ Build a creative and interactive multimodal application powered by Groq, leverag
 
 ## 📽️ Demo & Deliverables
 
-- ![Demo Video](https://drive.google.com/file/d/1w5YLO4lqDFvDHHuHesCJccbwOpIhCzeu/view?usp=sharing)
+- [Demo Video](https://drive.google.com/file/d/1w5YLO4lqDFvDHHuHesCJccbwOpIhCzeu/view?usp=sharing)
 
 
 ---
