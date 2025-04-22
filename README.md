@@ -92,7 +92,7 @@ Build a creative and interactive multimodal application powered by Groq, leverag
 
 ## 📽️ Demo & Deliverables
 
-- **Demo Video Link:** [Paste YouTube or Loom link here]
+- ![Demo Video](https://drive.google.com/file/d/1w5YLO4lqDFvDHHuHesCJccbwOpIhCzeu/view?usp=sharing)
 
 
 ---
@@ -130,21 +130,43 @@ npm run dev
 
 ---
 
-## 🧬 Future Scope
+### 🧬 Future Scope
 
 List improvements, extensions, or follow-up features:
 
-- 📈 More integrations
-- 🛡️ Security enhancements
-- 🌐 Localization / broader accessibility
+## 📈 More integrations:
+- Connect Zeno-AI with productivity tools like Google Calendar, Notion, Slack, or smart home devices for a more powerful assistant experience.
+
+## 🛡️ Security enhancements:
+- Implement user authentication, encrypted voice data processing, and privacy-first features to ensure secure interactions.
+
+## 🌐 Localization / broader accessibility:
+- Memory & Personalization
+Enable Zeno-AI to remember user preferences, recurring tasks, and context across sessions for a more personalized experience.
 
 ---
 
-## 📎 Resources / Credits
+### 📎 Resources / Credits
 
-- APIs or datasets used
-- Open source libraries or tools referenced
-- Acknowledgements
+## APIs & Services Used
+
+- HACKHAZARDS API – for powering Zeno-AI’s conversational intelligence.
+
+- Web Speech API – for real-time voice input and text-to-speech output.
+
+## Open Source Libraries & Tools
+
+- React – for building the frontend interface.
+
+- Tailwind CSS – for quick and responsive UI styling.
+
+## Acknowledgements
+
+- Huge thanks to the [HACKHAZARDS] organizers and mentors for the guidance and support.
+
+- Inspired by projects like [Zeno-AI].
+
+- Shout-out to the amazing dev community whose tools and docs made this possible.
 
 ---
 
