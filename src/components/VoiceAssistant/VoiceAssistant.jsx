@@ -33,7 +33,7 @@ const VoiceAssistant = () => {
         loadVoices();
     }, []);
 
-
+    //This function is used to , read aloud the text argument to webSpeechAPI's voice
     const speakText = (text) => {
         const synth = window.speechSynthesis;
         const utterance = new SpeechSynthesisUtterance(text);
@@ -58,13 +58,15 @@ const VoiceAssistant = () => {
         synth.speak(utterance);
     };
 
+
     const sendMessage = async (userInput) => {
 
         //if we dont have any user input , or it is empty then return from this function
         if (!userInput.trim()) return;
 
         const newMessages = [...messages, { role: "user", content: userInput }];
-        setMessages(newMessages);
+
+        setMessages(newMessages); // pushing the newMessages array to state
         setLoading(true);
 
         try {
@@ -72,7 +74,7 @@ const VoiceAssistant = () => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer ${import.meta.env.VITE_GROQAPI_KEY}`,
+                    Authorization: `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
                 },
                 body: JSON.stringify({
                     model: "llama3-70b-8192",
@@ -98,6 +100,7 @@ const VoiceAssistant = () => {
         }
     };
 
+    
     const initializeRecognition = () => {
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
         const recognition = new SpeechRecognition();
@@ -164,7 +167,7 @@ const VoiceAssistant = () => {
                 speechSynthesis.speak(utterance);
                 window.open("https://www.facebook.com/", "_blank");
             } else {
-                sendMessage(finalTranscript);
+                sendMessage(finalTranscript); //sending the voice to text input to the sendMessage() function , to call the API.
             }
 
             recognitionRef.current.transcript = "";
@@ -180,6 +183,7 @@ const VoiceAssistant = () => {
         recognitionRef.current = recognition;
     };
 
+    // When user clicks on start button , we are calling (initializeRecognition()) i.e, start getting the users voice input to text.
     const handleStartListening = () => {
         setIsAssistantSpeaking(false)
         setLiveTranscript("")
@@ -202,7 +206,7 @@ const VoiceAssistant = () => {
         <>
 
             {/* rendering the aurora , when user gives voice command */}
-            <div className="hidden md:flex absolute top-0 ">{
+            <div className="absolute top-0 ">{
                 isListening && <Aurora colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
                     blend={0.5}
                     amplitude={1.0}
@@ -214,10 +218,10 @@ const VoiceAssistant = () => {
                 {loading && <Loader />}
             </div>
 
-            <div className="mt-15 h-screen flex justify-center overflow-x-hidden">
+            <div className="mt-15 h-[90vh] flex justify-center overflow-x-hidden">
 
                 <div className={`absolute top-[20%] md:top-[30%]  rounded-3xl flex flex-col p-5 gap-5 lg:gap-8 items-center justify-center 
-                    ${mode == 'dark' ? 'lg:bg-[#0f0f0f]' : 'bg-[#a1a1a1]'} `}>
+                    ${mode == 'dark' ? 'bg-[#0f0f0f] w-[90vw] lg:w-auto' : 'bg-[#c5c5c5] w-[90vw] lg:w-auto'} `}>
                     <div className=" text-5xl md:text-6xl  lg:text-7xl font-bold md:text-center bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
                         Welcome to Zeno Assistant
                     </div>
@@ -227,7 +231,7 @@ const VoiceAssistant = () => {
                             <div className="hidden md:flex">
                                 <i className="fa-solid fa-phone-volume "></i>
                             </div>
-                            <p>Ask Anything You Want !!</p>
+                            <p>Ask Anything You Want </p>
                         </div>
                         <div className={`gap-5 border-gray-600 cursor-pointer  border-2 rounded-3xl p-3 lg:p-5 text-2xl  flex items-center justify-center
                                ${mode == 'dark' ? 'text-gray-400 hover:bg-[#1f1f1f]' : 'text-black hover:bg-[#a1a1a1]'}  `}>
@@ -272,7 +276,7 @@ const VoiceAssistant = () => {
             </div>
 
             <ToastContainer
-                theme="dark" 
+                theme="dark"
                 position="top-center"
                 autoClose={3000}
             />
