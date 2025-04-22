@@ -41,21 +41,21 @@ Build a creative and interactive multimodal application powered by Groq, leverag
 
 - Real-time Voice Interaction: Enabling smooth and fast voice input/output without lag.
 
-Natural Language Understanding: Making sure the assistant could handle context, follow-ups, and casual dialogue.
+- Natural Language Understanding: Making sure the assistant could handle context, follow-ups, and casual dialogue.
 
-Multimodal Integration: Combining text and voice interfaces while maintaining consistency in behavior.
+- Multimodal Integration: Combining text and voice interfaces while maintaining consistency in behavior.
 
-Cross-platform Accessibility: Ensuring Zeno-AI could run on web and mobile platforms without complex setup.
+- Cross-platform Accessibility: Ensuring Zeno-AI could run on web and mobile platforms without complex setup.
 
 ## Any pivots, brainstorms, or breakthroughs during hacking:
 
 - Initially, we focused only on a voice interface, but during brainstorming we realized a hybrid (voice + text) interface was more flexible for users.
 
-We pivoted from using a basic command model to integrating a full conversational AI (LLM-backed), which improved the user experience dramatically.
+- We pivoted from using a basic command model to integrating a full conversational AI (LLM-backed), which improved the user experience dramatically.
 
-A breakthrough moment was optimizing the voice-to-text pipeline using Web Speech API and custom feedback loops to reduce latency and improve response accuracy.
+- A breakthrough moment was optimizing the voice-to-text pipeline using Web Speech API and custom feedback loops to reduce latency and improve response accuracy.
 
-We also experimented with user personas and contextual memory, which helped Zeno-AI feel more personalized and human-like.
+- We also experimented with user personas and contextual memory, which helped Zeno-AI feel more personalized and human-like.
 
 ---
 
@@ -93,17 +93,17 @@ We also experimented with user personas and contextual memory, which helped Zeno
 ## 📽️ Demo & Deliverables
 
 - **Demo Video Link:** [Paste YouTube or Loom link here]
-- **Pitch Deck / PPT Link:** [Paste Google Slides / PDF link here]
+
 
 ---
 
 ## ✅ Tasks & Bonus Checklist
 
-- [ ] **All members of the team completed the mandatory task - Followed at least 2 of our social channels and filled the form** (Details in Participant Manual)
-- [ ] **All members of the team completed Bonus Task 1 - Sharing of Badges and filled the form (2 points)** (Details in Participant Manual)
-- [ ] **All members of the team completed Bonus Task 2 - Signing up for Sprint.dev and filled the form (3 points)** (Details in Participant Manual)
+- ✅ **All members of the team completed the mandatory task - Followed at least 2 of our social channels and filled the form** 
+- ✅ **All members of the team completed Bonus Task 1 - Sharing of Badges and filled the form (2 points)** 
+- ✅ **All members of the team completed Bonus Task 2 - Signing up for Sprint.dev and filled the form (3 points)**
 
-_(Mark with ✅ if completed)_
+
 
 ---
 
@@ -148,8 +148,26 @@ List improvements, extensions, or follow-up features:
 
 ---
 
-## 🏁 Final Words
+### 🏁 Final Words
 
-Share your hackathon journey — challenges, learnings, fun moments, or shout-outs!
+## Our Hackathon Journey
+
+What a ride! Building Zeno-AI in just a few days was equal parts chaotic and exhilarating. From ideation to demo, it was a full-speed sprint with late-night coding sessions, voice glitches that made us laugh out loud, and moments of pure “ah-ha!” breakthroughs.
+
+## Challenges
+
+- Getting voice and text interfaces to play nice together was tougher than expected—especially with real-time syncing.
+
+- Debugging Web Speech API quirks at 2AM definitely tested our patience (and sense of humor).
+
+- Managing context in conversations without confusing the AI was a tricky logic puzzle we had to keep refining.
+
+## Learnings
+
+- We learned how important user flow is—especially when switching between voice and text. Tiny tweaks made a huge difference in usability.
+
+- Working with AI is less about telling it what to do and more about guiding it with the right prompts and context.
+
+- Teamwork really carried us through—everyone had moments where they hit walls, and someone else would jump in with a fresh idea or fix.
 
 ---
